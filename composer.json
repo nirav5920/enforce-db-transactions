@@ -1,0 +1,31 @@
+{
+    "name": "nirav5920/enforce-db-transactions",
+    "description": "Laravel middleware to enforce database transactions for multiple write operations",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nirav Pitroda",
+            "email": "niravpitroda30@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "illuminate/http": "^8.0|^9.0|^10.0",
+        "illuminate/support": "^8.0|^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Nirav5920\\EnforceDbTransactions\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Nirav5920\\EnforceDbTransactions\\EnforceDbTransactionsServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
