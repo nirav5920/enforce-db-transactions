@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Nirav5920\EnforceDbTransactions\Middleware;
+namespace Nirav5920\EnforceDbTransactions\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
@@ -47,7 +47,7 @@ class EnforceDbTransactions
 
         // Ensure transactions for write operations
         if ($writeQueryCount > 1 && ! $transactionStarted) {
-            if (app()->environment('production', 'staging')) {
+            if (env('APP_ENV') === 'production') {
                 Log::error([
                     'error' => 'Multiple write operations detected without a transaction. Please wrap your queries in a DB::transaction() block.',
                 ]);

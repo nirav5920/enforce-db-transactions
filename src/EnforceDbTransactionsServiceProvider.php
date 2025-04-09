@@ -6,7 +6,7 @@ namespace Nirav5920\EnforceDbTransactions;
 
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Support\ServiceProvider;
-use Nirav5920\EnforceDbTransactions\Middleware\EnforceDbTransactions;
+use Nirav5920\EnforceDbTransactions\Http\Middleware\EnforceDbTransactions;
 
 class EnforceDbTransactionsServiceProvider extends ServiceProvider
 {
